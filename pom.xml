@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.jsonld-java</groupId>
 	<artifactId>jsonld-java-parent</artifactId>
-	<version>0.13.2-SNAPSHOT</version>
+	<version>0.13.1-local</version>
 	<name>JSONLD Java :: Parent</name>
 	<description>Json-LD Java Parent POM</description>
 	<packaging>pom</packaging>
@@ -20,7 +20,7 @@
 		<url>git@github.com:dataspan/jsonld-java.git</url>
 		<connection>scm:git:git@github.com:dataspan/jsonld-java.git</connection>
 		<developerConnection>scm:git:git@github.com:dataspan/jsonld-java.git</developerConnection>
-	  <tag>HEAD</tag>
+	  <tag>jsonld-java-parent-0.13.1-local</tag>
   </scm>
 	<developers>
 		<developer>
