@@ -18,9 +18,9 @@
 		</license>
 	</licenses>
 	<scm>
-		<url>git@github.com:jsonld-java/jsonld-java.git</url>
-		<connection>scm:git:git@github.com:jsonld-java/jsonld-java.git</connection>
-		<developerConnection>scm:git:git@github.com:jsonld-java/jsonld-java.git</developerConnection>
+		<url>git@github.com:dataspan/jsonld-java.git</url>
+		<connection>scm:git:git@github.com:dataspan/jsonld-java.git</connection>
+		<developerConnection>scm:git:git@github.com:dataspan/jsonld-java.git</developerConnection>
 	</scm>
 	<developers>
 		<developer>
