@@ -7,7 +7,7 @@
 		<version>0.13.1-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>jsonld-java</artifactId>
+	<artifactId>jsonld-java-local</artifactId>
 	<name>JSONLD Java :: Core</name>
 	<description>Json-LD core implementation</description>
 	<packaging>bundle</packaging>

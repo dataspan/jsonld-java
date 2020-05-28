@@ -31,6 +31,27 @@
 		</developer>
 	</developers>
 
+	<repositories>
+		<!-- Artifactory, the Internal Maven Repository -->
+		<repository>
+			<id>artifactory</id>
+			<url>http://artifactory.belprime.net/artifactory/repo</url>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>artifactory</id>
+			<name>artifactory-releases</name>
+			<url>http://releases.artifactory.belprime.net/artifactory/libs-releases-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>artifactory</id>
+			<name>artifactory-snapshots</name>
+			<url>http://artifactory.belprime.net/artifactory/libs-snapshots-local</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<modules>
 		<module>core</module>
 	</modules>
@@ -465,34 +486,6 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-
-	<repositories>
-		<repository>
-			<id>sonatype-nexus-snapshots</id>
-			<name>Sonatype Nexus Snapshots</name>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-
-
-	<distributionManagement>
-		<snapshotRepository>
-			<id>sonatype-nexus-snapshots</id>
-			<name>Sonatype Nexus Snapshots</name>
-			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-		</snapshotRepository>
-		<repository>
-			<id>sonatype-nexus-staging</id>
-			<name>Nexus Release Repository</name>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-		</repository>
-	</distributionManagement>
 
 	<profiles>
 		<profile>
