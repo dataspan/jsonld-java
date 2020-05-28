@@ -19,6 +19,7 @@ import org.apache.commons.io.IOUtils;
  *
  */
 public class TestUtils {
+    public static final String SCHEMA_JSONLD_URL = "https://schema.org/version/8.0/schema.jsonld";
 
     public static InputStream copyResourceToFileStream(File testDir, String resource)
             throws Exception {

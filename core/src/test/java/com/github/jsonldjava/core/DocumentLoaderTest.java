@@ -1,5 +1,6 @@
 package com.github.jsonldjava.core;
 
+import static com.github.jsonldjava.utils.TestUtils.SCHEMA_JSONLD_URL;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
@@ -154,7 +155,7 @@ public class DocumentLoaderTest {
 
     @Test
     public void loadDocumentSchemaOrg() throws Exception {
-        final RemoteDocument document = documentLoader.loadDocument("http://schema.org/");
+        final RemoteDocument document = documentLoader.loadDocument(SCHEMA_JSONLD_URL);
         final Object context = document.getDocument();
         assertTrue(context instanceof Map);
         assertFalse(((Map<?, ?>) context).isEmpty());
@@ -411,11 +412,12 @@ public class DocumentLoaderTest {
     }
 
     @Test
+    @Ignore("Not a test")
     public void testRemoteContextCaching() throws Exception {
-        final String[] urls = { "http://schema.org/", "http://schema.org/docs/jsonldcontext.json" };
+        final String[] urls = { SCHEMA_JSONLD_URL, "http://schema.org/docs/jsonldcontext.json" };
         for (final String url : urls) {
             final long start = System.currentTimeMillis();
-            for (int i = 1; i <= 1000; i++) {
+            for (int i = 1; i <= 2; i++) {
                 documentLoader.loadDocument(url);
 
                 final long seconds = (System.currentTimeMillis() - start) / 1000;

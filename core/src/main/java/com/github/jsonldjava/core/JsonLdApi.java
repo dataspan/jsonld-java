@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.UUID;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -582,9 +583,10 @@ public class JsonLdApi {
                     }
                     // 7.4.3)
                     if (JsonLdConsts.ID.equals(expandedProperty)) {
-                        if (value instanceof String) {
-                            expandedValue = activeCtx.expandIri((String) value, true, false, null,
-                                    null);
+                        if (value == null && opts.isAllowNullableId()) {
+                            expandedValue = UUID.randomUUID().toString();
+                        } if (value instanceof String) {
+                            expandedValue = opts.isExpandIri() ? activeCtx.expandIri((String) value, true, false, null, null) : value;
                         } else if (frameExpansion) {
                             if (value instanceof Map) {
                                 if (((Map<String, Object>) value).size() != 0) {

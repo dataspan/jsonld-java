@@ -8,11 +8,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class ContextCompactionTest {
 
-    // @Ignore("Disable until schema.org is fixed")
+     @Ignore("Disable until schema.org is fixed")
     @Test
     public void testCompaction() throws Exception {
 

@@ -103,6 +103,9 @@ public class JsonLdOptions {
     private Boolean requireAll = false;
     private Boolean allowContainerSetOnType = false;
 
+    private boolean expandIri = true;
+    private boolean allowNullableId = false;
+
     // RDF conversion options :
     // http://www.w3.org/TR/json-ld-api/#serialize-rdf-as-json-ld-algorithm
 
@@ -294,6 +297,21 @@ public class JsonLdOptions {
         this.documentLoader = documentLoader;
     }
 
+    public boolean isExpandIri() {
+        return expandIri;
+    }
+
+    public void setExpandIri(boolean expandIri) {
+        this.expandIri = expandIri;
+    }
+
+    public boolean isAllowNullableId() {
+        return allowNullableId;
+    }
+
+    public void setAllowNullableId(boolean allowNullableId) {
+        this.allowNullableId = allowNullableId;
+    }
     // TODO: THE FOLLOWING ONLY EXIST SO I DON'T HAVE TO DELETE A LOT OF CODE,
     // REMOVE IT WHEN DONE
     public String format = null;

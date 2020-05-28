@@ -1,5 +1,6 @@
 package com.github.jsonldjava.core;
 
+import static com.github.jsonldjava.utils.TestUtils.SCHEMA_JSONLD_URL;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -70,7 +71,7 @@ public class MinimalSchemaOrgRegressionTest {
 
     @Test
     public void testApacheHttpClient() throws Exception {
-        final URL url = new URL("http://schema.org/");
+        final URL url = new URL(SCHEMA_JSONLD_URL);
         // Common CacheConfig for both the JarCacheStorage and the underlying
         // BasicHttpCacheStorage
         final CacheConfig cacheConfig = CacheConfig.custom().setMaxCacheEntries(1000)
