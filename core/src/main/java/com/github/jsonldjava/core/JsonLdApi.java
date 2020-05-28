@@ -585,7 +585,7 @@ public class JsonLdApi {
                     if (JsonLdConsts.ID.equals(expandedProperty)) {
                         if (value == null && opts.isAllowNullableId()) {
                             expandedValue = UUID.randomUUID().toString();
-                        } if (value instanceof String) {
+                        } else if (value instanceof String) {
                             expandedValue = opts.isExpandIri() ? activeCtx.expandIri((String) value, true, false, null, null) : value;
                         } else if (frameExpansion) {
                             if (value instanceof Map) {

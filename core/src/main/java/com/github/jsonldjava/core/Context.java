@@ -1115,13 +1115,13 @@ public class Context extends LinkedHashMap<String, Object> {
         if (td != null && JsonLdConsts.ID.equals(td.get(JsonLdConsts.TYPE))) {
             // TODO: i'm pretty sure value should be a string if the @type is
             // @id
-            rval.put(JsonLdConsts.ID, expandIri(value.toString(), true, false, null, null));
+            rval.put(JsonLdConsts.ID, expandIri(value.toString().trim(), true, false, null, null));
             return rval;
         }
         // 2)
         if (td != null && JsonLdConsts.VOCAB.equals(td.get(JsonLdConsts.TYPE))) {
             // TODO: same as above
-            rval.put(JsonLdConsts.ID, expandIri(value.toString(), true, true, null, null));
+            rval.put(JsonLdConsts.ID, expandIri(value.toString().trim(), true, true, null, null));
             return rval;
         }
         // 3)
